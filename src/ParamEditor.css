@@ -1,0 +1,7 @@
+.paramName {
+    display:inline-block;
+    width: 150px;
+
+    font-weight: bold;
+    text-align: center;
+}

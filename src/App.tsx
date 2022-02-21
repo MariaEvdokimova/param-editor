@@ -1,24 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Model, Param, ParamEditor} from './ParamEditor';
+
+const params: Param[] = [
+        {
+            id: 1,
+            name: 'Назначение'
+        },
+        {
+            id: 2,
+            name: 'Длина'
+        }
+]
+
+const model: Model = {
+    paramValues:
+    [
+        {
+            paramId: 1,
+            value: 'повседневное'
+        },
+        {
+            paramId: 2,
+            value: 'макси'
+        }
+    ]
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <ParamEditor params={params} model={model}/>
     </div>
   );
 }
